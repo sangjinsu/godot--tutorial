@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://fvu51cle1fa1"]
+[gd_scene load_steps=12 format=3 uid="uid://fvu51cle1fa1"]
 
 [ext_resource type="PackedScene" uid="uid://7p1ues8nmgjc" path="res://scenes/player.tscn" id="1_kg2i1"]
 [ext_resource type="Texture2D" uid="uid://dxrmuy28qll62" path="res://assets/sprites/world_tileset.png" id="2_ot468"]
 [ext_resource type="PackedScene" uid="uid://exnlb121aan3" path="res://scenes/platform.tscn" id="3_br045"]
+[ext_resource type="PackedScene" uid="uid://dtfhxi31i8d05" path="res://scenes/coin.tscn" id="4_xt48b"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kmcwa"]
 
@@ -190,6 +191,21 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_kmcwa")
 sources/0 = SubResource("TileSetAtlasSource_i2nd4")
 
+[sub_resource type="Animation" id="Animation_oebyv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Platform:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.06667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(66, -27), Vector2(0, -36)]
+}
+
 [sub_resource type="Animation" id="Animation_x1x3m"]
 resource_name = "move"
 length = 1.5
@@ -205,21 +221,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(2, -30), Vector2(67, -31)]
-}
-
-[sub_resource type="Animation" id="Animation_oebyv"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Platform:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.06667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(66, -27), Vector2(0, -36)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pkp7a"]
@@ -260,3 +261,21 @@ position = Vector2(-1, 42)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(1, 42)
 shape = SubResource("WorldBoundaryShape2D_jm45q")
+
+[node name="Coin" parent="." instance=ExtResource("4_xt48b")]
+position = Vector2(88, -5)
+
+[node name="Coin2" parent="." instance=ExtResource("4_xt48b")]
+position = Vector2(152, -24)
+
+[node name="Coin3" parent="." instance=ExtResource("4_xt48b")]
+position = Vector2(167, -24)
+
+[node name="Coin4" parent="." instance=ExtResource("4_xt48b")]
+position = Vector2(233, -39)
+
+[node name="Coin5" parent="." instance=ExtResource("4_xt48b")]
+position = Vector2(280, -69)
+
+[node name="Coin6" parent="." instance=ExtResource("4_xt48b")]
+position = Vector2(22, -7)
