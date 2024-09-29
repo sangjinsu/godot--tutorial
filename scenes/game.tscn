@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://fvu51cle1fa1"]
+[gd_scene load_steps=15 format=3 uid="uid://fvu51cle1fa1"]
 
 [ext_resource type="PackedScene" uid="uid://7p1ues8nmgjc" path="res://scenes/player.tscn" id="1_kg2i1"]
 [ext_resource type="Texture2D" uid="uid://dxrmuy28qll62" path="res://assets/sprites/world_tileset.png" id="2_ot468"]
 [ext_resource type="PackedScene" uid="uid://exnlb121aan3" path="res://scenes/platform.tscn" id="3_br045"]
-[ext_resource type="PackedScene" uid="uid://dtfhxi31i8d05" path="res://scenes/coin.tscn" id="4_xt48b"]
-[ext_resource type="PackedScene" uid="uid://uyhiiu4v6jac" path="res://kill_zone.tscn" id="5_l4d4n"]
+[ext_resource type="PackedScene" path="res://scenes/coin.tscn" id="4_xt48b"]
+[ext_resource type="PackedScene" path="res://kill_zone.tscn" id="5_l4d4n"]
+[ext_resource type="FontFile" uid="uid://dgwyduebvjhjg" path="res://assets/fonts/PixelOperator8.ttf" id="6_meuin"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kmcwa"]
 
@@ -299,3 +300,14 @@ position = Vector2(-1, 42)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/StaticBody2D"]
 position = Vector2(1, 42)
 shape = SubResource("WorldBoundaryShape2D_jm45q")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -35.0
+offset_top = -75.0
+offset_right = 147.0
+offset_bottom = -59.0
+scale = Vector2(0.902217, 1.16393)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_meuin")
+theme_override_font_sizes/font_size = 8
+text = "Splace to jump"
