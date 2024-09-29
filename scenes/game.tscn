@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dxrmuy28qll62" path="res://assets/sprites/world_tileset.png" id="2_ot468"]
 [ext_resource type="PackedScene" uid="uid://exnlb121aan3" path="res://scenes/platform.tscn" id="3_br045"]
 [ext_resource type="PackedScene" uid="uid://dtfhxi31i8d05" path="res://scenes/coin.tscn" id="4_xt48b"]
-[ext_resource type="PackedScene" uid="uid://uyhiiu4v6jac" path="res://kill_zone.tscn" id="5_l4d4n"]
+[ext_resource type="PackedScene" uid="uid://uyhiiu4v6jac" path="res://scenes/kill_zone.tscn" id="5_l4d4n"]
 [ext_resource type="FontFile" uid="uid://dgwyduebvjhjg" path="res://assets/fonts/PixelOperator8.ttf" id="6_meuin"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kmcwa"]
@@ -327,6 +327,6 @@ scale = Vector2(0.902217, 1.16393)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_meuin")
 theme_override_font_sizes/font_size = 8
-text = "Splace to jump"
+text = "Space to jump"
 horizontal_alignment = 1
 vertical_alignment = 1
